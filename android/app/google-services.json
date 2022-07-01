@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "664538039855",
+    "project_id": "unifinal-58f33",
+    "storage_bucket": "unifinal-58f33.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:664538039855:android:261a147188d5833a43e8da",
+        "android_client_info": {
+          "package_name": "com.example.projectunispiritfinalt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "664538039855-b9cvsf9mmmavgum7v2hd73fcqgrt67kd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAg-RbbRtxhY1IQ2Nt-O6omnZvToKwk404"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "664538039855-b9cvsf9mmmavgum7v2hd73fcqgrt67kd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
