@@ -3,23 +3,23 @@ import 'package:flutter/material.dart';
 final TextStyle fadedTextStyle = TextStyle(
   fontSize: 16.0,
   fontWeight: FontWeight.bold,
-  color: Color(0x99FFFFFF),
+  color: Color(0xFF000000),
 );
 
 final TextStyle whiteHeadingTextStyle = TextStyle(
   fontSize: 40.0,
   fontWeight: FontWeight.bold,
-  color: Color(0xFFFFFFFF),
+  color: Color(0xFF000000),
 );
 
 final TextStyle categoryTextStyle = TextStyle(
   fontSize: 14.0,
   fontWeight: FontWeight.bold,
-  color: Color(0xFFFFFFFF),
+  color: Color(0xFF000000),
 );
 
 final TextStyle selectedCategoryTextStyle = categoryTextStyle.copyWith(
-  color: Color(0xFFFF4700),
+  color: Color(0xFF901DE2),
 );
 
 final TextStyle eventTitleTextStyle = TextStyle(
@@ -31,7 +31,7 @@ final TextStyle eventTitleTextStyle = TextStyle(
 final TextStyle eventWhiteTitleTextStyle = TextStyle(
   fontSize: 38.0,
   fontWeight: FontWeight.bold,
-  color: Color(0xFFFFFFFF),
+  color: Color(0xFF000000),
 );
 
 final TextStyle eventLocationTextStyle = TextStyle(
@@ -48,7 +48,7 @@ final TextStyle guestTextStyle = TextStyle(
 final TextStyle punchLine1TextStyle = TextStyle(
   fontSize: 28.0,
   fontWeight: FontWeight.w800,
-  color: Color(0xFFFF4700),
+  color: Color(0xFF901DE2),
 );
 
 final TextStyle punchLine2TextStyle = punchLine1TextStyle.copyWith(color: Color(0xFF000000));
