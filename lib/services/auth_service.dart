@@ -3,35 +3,23 @@ import 'package:flutter/material.dart';
 
 class AuthException implements Exception {
   String message;
+
   AuthException(this.message);
 }
 
 class AuthService extends ChangeNotifier {
-  FirebaseAuth _auth = FirebaseAuth.instance;
-  User? usuario;
-  bool isLoading = true;
+  AuthService();
 
-  AuthService() {
-    _authCheck();
-  }
+  final FirebaseAuth _auth = FirebaseAuth.instance;
 
-  _authCheck() {
-    _auth.authStateChanges().listen((User? user) {
-      usuario = (user == null) ? null : user;
-      isLoading = false;
-      notifyListeners();
-    });
-  }
-
-  _getUser() {
-    usuario = _auth.currentUser;
-    notifyListeners();
-  }
-
-  registrar(String email, String senha) async {
+  Future<void> registrar(String email, String senha) async {
     try {
-      await _auth.createUserWithEmailAndPassword(email: email, password: senha);
-      _getUser();
+      await _auth
+          .createUserWithEmailAndPassword(email: email, password: senha)
+          .then((value) {
+        login(email, senha);
+        _auth.currentUser?.updateDisplayName(email.split('@')[0]);
+      });
     } on FirebaseAuthException catch (e) {
       if (e.code == 'weak-password') {
         throw AuthException('A senha é muito fraca!');
@@ -41,10 +29,10 @@ class AuthService extends ChangeNotifier {
     }
   }
 
-  login(String email, String senha) async {
+  Future<void> login(String email, String senha) async {
     try {
       await _auth.signInWithEmailAndPassword(email: email, password: senha);
-      _getUser();
+      _reloadUser();
     } on FirebaseAuthException catch (e) {
       if (e.code == 'user-not-found') {
         throw AuthException('Email não encontrado. Registe-se.');
@@ -54,8 +42,11 @@ class AuthService extends ChangeNotifier {
     }
   }
 
-  logout() async {
+  Future<void> _reloadUser() async {
+    return _auth.currentUser?.reload();
+  }
+
+  Future<void> logout() async {
     await _auth.signOut();
-    _getUser();
   }
 }
