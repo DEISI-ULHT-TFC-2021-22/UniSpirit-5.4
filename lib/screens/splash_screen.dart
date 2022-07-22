@@ -34,9 +34,10 @@ class SplashScreen extends StatelessWidget {
             return const HomePage();
           }
           if (userSnapshot.data == null) {
-            return const LoginScreen();
+           return const LoginScreen();
           }
-          return const SizedBox();
+          return const SizedBox()
+          ;
         },
       ),
     );
