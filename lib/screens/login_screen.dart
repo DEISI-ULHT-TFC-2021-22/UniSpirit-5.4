@@ -3,7 +3,6 @@ import 'package:provider/provider.dart';
 
 import '../services/auth_service.dart';
 
-
 class LoginScreen extends StatefulWidget {
   LoginScreen({Key? key}) : super(key: key);
 
@@ -103,7 +102,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 Padding(
                   padding:
-                  EdgeInsets.symmetric(vertical: 12.0, horizontal: 24.0),
+                      EdgeInsets.symmetric(vertical: 12.0, horizontal: 24.0),
                   child: TextFormField(
                     controller: senha,
                     obscureText: true,
@@ -137,27 +136,27 @@ class _LoginScreenState extends State<LoginScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: (loading)
                           ? [
-                        Padding(
-                          padding: EdgeInsets.all(16),
-                          child: SizedBox(
-                            width: 24,
-                            height: 24,
-                            child: CircularProgressIndicator(
-                              color: Colors.white,
-                            ),
-                          ),
-                        )
-                      ]
+                              Padding(
+                                padding: EdgeInsets.all(16),
+                                child: SizedBox(
+                                  width: 24,
+                                  height: 24,
+                                  child: CircularProgressIndicator(
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              )
+                            ]
                           : [
-                        Icon(Icons.check),
-                        Padding(
-                          padding: EdgeInsets.all(16.0),
-                          child: Text(
-                            actionButton,
-                            style: TextStyle(fontSize: 20),
-                          ),
-                        ),
-                      ],
+                              Icon(Icons.check),
+                              Padding(
+                                padding: EdgeInsets.all(16.0),
+                                child: Text(
+                                  actionButton,
+                                  style: TextStyle(fontSize: 20),
+                                ),
+                              ),
+                            ],
                     ),
                   ),
                 ),
