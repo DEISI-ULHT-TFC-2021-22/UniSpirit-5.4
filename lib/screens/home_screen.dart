@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
 import 'package:projectunispiritfinalt/screens/perfil_screen.dart';
+import 'package:projectunispiritfinalt/screens/userProfile/pages/profile_page.dart';
 
 
 
-import 'Meets/meets_screen.dart';
+// import '../features/meets/presentation/screens/meets_screen.dart';
 import 'apontamentos_screen.dart';
 import 'explorar.dart';
 
@@ -21,10 +22,9 @@ class _HomeScreenState extends State<HomeScreen> {
   int currentIndex = 0;
   static const List<Widget> screens = [
     ExplorarScreen(),
-    MeetsScreen(),
-    //CreateMeetScreen(),
+    // CreateMeetScreen(),
     ApontamentosScreen(),
-    PerfilScreen()
+    ProfilePage(),
   ];
 
   @override
