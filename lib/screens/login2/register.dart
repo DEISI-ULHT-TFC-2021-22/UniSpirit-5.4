@@ -237,7 +237,7 @@ class _RegisterState extends State<Register> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => LoginPage4(),
+                                    builder: (context) => LoginScreen(),
                                   ),
                                 );
                               },
@@ -300,7 +300,7 @@ class _RegisterState extends State<Register> {
                   Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
-                      builder: (_) => LoginPage4(),
+                      builder: (_) => LoginScreen(),
                     ),
                   )
                 });

@@ -4,23 +4,25 @@ import 'package:projectunispiritfinalt/screens/login2/homepage.dart';
 
 import 'forgot.dart';
 import 'register.dart';
-import 'package:flutter/material.dart';
 
-import 'package:flutter_svg/flutter_svg.dart';
-class LoginPage4 extends StatefulWidget {
+
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({Key? key}) : super(key: key);
   static const String route = 'login4_screen';
+
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _LoginScreenState createState() => _LoginScreenState();
 }
 
-class _LoginPageState extends State<LoginPage4> {
+class _LoginScreenState extends State<LoginScreen> {
   bool _isObscure3 = true;
   bool visible = false;
   final _formkey = GlobalKey<FormState>();
-  final TextEditingController emailController = new TextEditingController();
-  final TextEditingController passwordController = new TextEditingController();
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
 
   final _auth = FirebaseAuth.instance;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -238,8 +240,6 @@ class _LoginPageState extends State<LoginPage4> {
                     SizedBox(
                       height: 15,
                     ),
-
-
                   ],
                 ),
               ),
@@ -253,15 +253,15 @@ class _LoginPageState extends State<LoginPage4> {
   void signIn(String email, String password) async {
     if (_formkey.currentState!.validate()) {
       try {
-        UserCredential userCredential =
-            await FirebaseAuth.instance.signInWithEmailAndPassword(
+         await FirebaseAuth.instance.signInWithEmailAndPassword(
           email: email,
           password: password,
         );
+        if (!mounted) return;
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => HomePage(),
+            builder: (context) => const HomePage(),
           ),
         );
       } on FirebaseAuthException catch (e) {

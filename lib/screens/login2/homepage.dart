@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:projectunispiritfinalt/screens/create_meet_screen.dart';
+import 'package:projectunispiritfinalt/features/meets/presentation/screens/create_meet_screen.dart';
+import 'package:projectunispiritfinalt/features/meets/presentation/screens/meets_categories.dart';
+import 'package:projectunispiritfinalt/screens/apontamentos_screen.dart';
 import 'package:projectunispiritfinalt/screens/explore/ui/homepage/home_page.dart';
-
 import 'package:projectunispiritfinalt/screens/perfil_screen.dart';
-
-
-
-import '../Meets/meets_screen.dart';
-import '../apontamentos_screen.dart';
-import '../explorar.dart';
+import 'package:projectunispiritfinalt/screens/userProfile/pages/profile_page.dart';
 
 class HomePage extends StatefulWidget {
   static const String route = 'homepage_screen';
@@ -40,10 +36,9 @@ class _HomePageState extends State<HomePage> {
         controller: pc,
         children: [
           HomePage8(),
-          CreateMeetScreen(),
-          CreateMeetScreen(),
+          MeetsCategoriesScreen(),
           ApontamentosScreen(),
-          PerfilScreen(),
+          ProfilePage(),
         ],
         onPageChanged: setPaginaAtual,
       ),

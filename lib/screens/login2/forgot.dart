@@ -115,7 +115,7 @@ class _ForgotpassState extends State<Forgotpass> {
                                   Navigator.pushReplacement(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => LoginPage4()));
+                                          builder: (context) => LoginScreen()));
                                 },
                                 child: Text(
                                   "Login",
@@ -189,7 +189,7 @@ class _ForgotpassState extends State<Forgotpass> {
           .sendPasswordResetEmail(email: email)
           .then((uid) => {
                 Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context) => LoginPage4()))
+                    MaterialPageRoute(builder: (context) => LoginScreen()))
               })
           .catchError((e) {});
     }
