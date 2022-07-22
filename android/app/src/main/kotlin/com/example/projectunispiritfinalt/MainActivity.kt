@@ -1,4 +1,4 @@
-package com.example.projectunispiritfinalt
+package com.example.unispirit
 
 import io.flutter.embedding.android.FlutterActivity
 
