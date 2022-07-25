@@ -62,4 +62,6 @@ https://youtu.be/k10FJczHfpY
 Video de demonstração Final:
 https://youtu.be/Uf_9diKXVq8
 
+Video de demonstração final com teste de 2 emuladores: https://youtu.be/Q--YGORISz4
+
 
